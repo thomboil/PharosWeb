@@ -5,9 +5,15 @@
  */
 body {
   padding-top: 56px;
+  background-color: #F2F2F2;
 }
 
 .navbarbg{
   background-color: #2196F3;
+}
+
+.card-header{
+  background-color: white;
+  border-bottom: 0px solid white;
 }
 
