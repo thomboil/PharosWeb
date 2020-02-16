@@ -1,0 +1,91 @@
+.grayShader{
+    background-color: rgba(215, 215, 215, 0.5);
+    margin-top: 5px;
+    background-clip: content-box;
+}
+
+html{
+    background-color: #F2F2F2;
+}
+
+body{
+    max-width: 1280px;
+    max-height: 888px;
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+    background-color: #F2F2F2;
+}
+
+.navbar{
+    background-color:#2196F3;
+    height: 64px;
+}
+.navbar-brand{
+    font-family: 'Roboto', 'Roboto Regular', 'Roboto';
+    font-weight: 800;
+    font-style: normal;
+    font-size: 30px;
+    color: #FFFFFF;
+    padding-left: 6px;
+    padding-top: 15px;
+}
+a.nav-link{
+    margin: 18px;
+    color: white;
+  }
+
+#arrow{
+    margin-top: 25px;
+    margin-left: 60px;
+    font-size: 1.2em;
+    color: rgb(215, 215, 215)
+}
+.PartiePolitique{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 23px;
+    padding-left: 40px;
+    padding-top: 35px;
+    padding-bottom: 5px;
+}
+
+.grayborder{
+    border: 1px solid #D7D7D7;
+    
+}
+
+.concept{
+    padding-left: 40px;
+    padding-top: 30px;
+    padding-bottom: 10px; 
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.overflow{
+    height: 624px;
+    overflow-x: hidden;
+    overflow-y: overlay;
+}
+.row{
+}
+
+.paragraph{
+    padding: 60px 20px;
+    font-family: 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.list-group{
+    padding-left: 0px;
+    padding-right: 0px;
+}
