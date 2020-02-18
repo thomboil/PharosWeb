@@ -93,3 +93,11 @@ a.nav-link{
 .etoile{
     align-self: right;
 }
+
+.leftPosition{
+    float: right;
+}
+.leftPositionTop{
+    float: right;
+    padding-right: 20px;
+}
