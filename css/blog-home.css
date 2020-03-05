@@ -3,14 +3,43 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-home/blob/master/LICENSE)
  */
-body {
-  padding-top: 56px;
+ html{
   background-color: #F2F2F2;
 }
 
-.navbarbg{
-  background-color: #2196F3;
+body{
+  max-width: 1280px;
+  max-height: 888px;
+  height: auto;
+  width: auto;
+  margin: 0 auto;
+  background-color: #F2F2F2;
 }
+
+
+.navbar{
+  background-color:#2196F3;
+  height: 64px;
+}
+.navbar-brand{
+  font-family: 'Roboto', 'Roboto Regular', 'Roboto';
+  font-weight: 800;
+  font-style: normal;
+  font-size: 30px;
+  color: #FFFFFF;
+  padding-left: 6px;
+  padding-top: 15px;
+}
+a.nav-link{
+  margin: 18px;
+  color: white;
+}
+/* 
+.my-icon{
+  color: white;
+  position: absolute;
+  text-align: right;
+} */
 
 .pharostitre{
   font-size: x-large;
@@ -21,12 +50,76 @@ body {
   background-color: #D7D7D7;
   border-color: rgb(112, 112, 112);
   /*text: #D7D7D7*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+.carte-centre{
+  height: 700px;
+  width: 359px;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: white;
+  margin: 9%;
+  margin-left: 24%;
+
+  border-right: 1px solid rgb(187, 187, 187);
+  border-bottom: 2px solid rgb(187, 187, 187);
+  
+
+}
+.carte{
+  height: 212px;
+  width: 249px;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: white;
+  margin: 9%;
+  margin-left: 24%;
+  border-right: 1px solid rgb(187, 187, 187);
+  border-bottom: 2px solid rgb(187, 187, 187);
+  
   
 }
-.card-header{
+
+.header{
   background-color: white;
   border-bottom: 0px solid white;
+  padding-top: 4%;
+  padding-left: 4%;
+  font-size: 16px;
+  margin-bottom: 12%;
+  
 }
+
+
+.monBtn{
+  height: 34px;
+  width: 214px;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #D7D7D7;
+  border-color: rgb(112, 112, 112);
+ 
+  font-size: 14px;
+  margin: auto;
+  margin-bottom: 10%;
+  text-align: center;
+  padding-top: 2%;
+  
+  
+  
+}
+.btn-text{
+
+ color: rgb(112, 112, 112);
+ 
+  
+}
+
+
+
 
 
 
