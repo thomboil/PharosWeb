@@ -58,17 +58,17 @@
           <div class="container">
             <div class="row">
               <div class="col-md-2 d-flex justify-content-md-center">
-                  <img src="img/btn_cercleVide.svg" class="img-fluid" alt="Responsive image">
+                  <img id="btnElection1" src="img/cercle_selected.svg" class="img-fluid btn-cercle" alt="Responsive image" onclick="clickImgElection1()">
               </div>
               <div class="col-md-10">
-                <p class="numElection">43e élection fédérale</p>
+                <p id="titreElection1" class="numElection"></p>
                 <p class="dateElection">21 octobre 2019</p>
               </div>
             </div>
 
               <div class="row space">
                 <div class="col-md-2 d-flex justify-content-md-center">
-                    <img src="img/btn_cercleVide.svg" class="img-fluid" alt="Responsive image">
+                    <img id="btnElection2" src="img/btn_cercleVide.svg" class="img-fluid btn-cercle" alt="Responsive image"  onclick="clickImgElection2()">
                 </div>
                 <div class="col-md-10">
                   <p class="numElection">Élections générales provinciales</p>
@@ -79,7 +79,7 @@
 
               <div class="row space">
                 <div class="col-md-2 d-flex justify-content-md-center">
-                    <img src="img/btn_cercleVide.svg" class="img-fluid" alt="Responsive image">
+                    <img id="btnElection3" src="img/btn_cercleVide.svg" class="img-fluid btn-cercle" alt="Responsive image"  onclick="clickImgElection3()">
                 </div>
                 <div class="col-md-10">
                   <p class="numElection">42e élection fédérale</p>
@@ -89,7 +89,7 @@
 
               <div class="row space">
                 <div class="col-md-2 d-flex justify-content-md-center">
-                    <img src="img/btn_cercleVide.svg" class="img-fluid" alt="Responsive image">
+                    <img id="btnElection4" src="img/btn_cercleVide.svg" class="img-fluid btn-cercle" alt="Responsive image"  onclick="clickImgElection4()">
                 </div>
                 <div class="col-md-10">
                   <p class="numElection">Élections générales provinciales</p>
@@ -109,7 +109,7 @@
           <div class="container">
             <div class="row space">
               <div class="col-md-2 d-flex justify-content-md-center">
-                <img src="img/btn_carreVide.svg" class="img-fluid" alt="Responsive image">
+                <img id="btnParti1" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis1()">
               </div>
               <div class="col-md-10">
                 <p class="abr">P.L.C.</p>
@@ -119,18 +119,7 @@
 
             <div class="row space">
               <div class="col-md-2 d-flex justify-content-md-center">
-                <img src="img/btn_carreVide.svg" class="img-fluid" alt="Responsive image">
-              </div>
-              <div class="col-md-10">
-                <p class="abr">P.L.C.</p>
-                <p class="nomComplet">Parti libéral du Canada</p>
-              </div>
-            </div>
-
-
-            <div class="row space">
-              <div class="col-md-2 d-flex justify-content-md-center">
-                <img src="img/btn_carreVide.svg" class="img-fluid" alt="Responsive image">
+                <img id="btnParti2" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis2()">
               </div>
               <div class="col-md-10">
                 <p class="abr">P.L.C.</p>
@@ -141,7 +130,7 @@
 
             <div class="row space">
               <div class="col-md-2 d-flex justify-content-md-center">
-                <img src="img/btn_carreVide.svg" class="img-fluid" alt="Responsive image">
+                <img id="btnParti3" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis3()">
               </div>
               <div class="col-md-10">
                 <p class="abr">P.L.C.</p>
@@ -152,7 +141,18 @@
 
             <div class="row space">
               <div class="col-md-2 d-flex justify-content-md-center">
-                <img src="img/btn_carreVide.svg" class="img-fluid" alt="Responsive image">
+                <img id="btnParti4" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis4()">
+              </div>
+              <div class="col-md-10">
+                <p class="abr">P.L.C.</p>
+                <p class="nomComplet">Parti libéral du Canada</p>
+              </div>
+            </div>
+
+
+            <div class="row space">
+              <div class="col-md-2 d-flex justify-content-md-center">
+                <img id="btnParti5" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis5()">
               </div>
               <div class="col-md-10">
                 <p class="abr">P.L.C.</p>
@@ -162,7 +162,7 @@
 
             <div class="row space">
               <div class="col-md-2 d-flex justify-content-md-center">
-                <img src="img/btn_carreVide.svg" class="img-fluid" alt="Responsive image">
+                <img id="btnParti6" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis6()">
               </div>
               <div class="col-md-10">
                 <p class="abr">P.L.C.</p>
@@ -172,7 +172,7 @@
 
             <div class="row space">
               <div class="col-md-2 d-flex justify-content-md-center">
-                <img src="img/btn_carreVide.svg" class="img-fluid" alt="Responsive image">
+                <img id="btnParti7" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis7()">
               </div>
               <div class="col-md-10">
                 <p class="abr">P.L.C.</p>
@@ -198,11 +198,12 @@
               <button class="btn btn-primary btn-menu btn-choix" type="submit">Comparer deux propositions...</button>
             </div> -->
 
-            <div class= "monBtn">
+            <div id="btnConnaitre" class= "monBtn">
+              <a href="" class="monBtn"></a>
               <span class="btn-text">Connaitre les propositions...</span>
             </div>
             
-            <div class= "monBtn">
+            <div id = "btnComparer" class= "monBtn">
               <span class="btn-text">Comparer deux propositions...</span>
             </div>
             
@@ -222,6 +223,7 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="index.js"></script>
 
 </body>
 
