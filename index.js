@@ -16,8 +16,19 @@ fetch('https://log2420-serve.herokuapp.com/JSON/output.json')
 
 function addElementPourElection(data)
 {
+    //Sets names from online json Elections
     //console.log(data.Elections[0].name);
     document.getElementById('titreElection1').innerHTML =data.Elections[0].name;
+    document.getElementById('dateElection1').innerHTML = data.Elections[0].date;
+
+    document.getElementById('titreElection2').innerHTML =data.Elections[1].name;
+    document.getElementById('dateElection2').innerHTML = data.Elections[1].date;
+
+    document.getElementById('titreElection3').innerHTML =data.Elections[2].name;
+    document.getElementById('dateElection3').innerHTML = data.Elections[2].date;
+
+    document.getElementById('titreElection4').innerHTML =data.Elections[3].name;
+    document.getElementById('dateElection4').innerHTML = data.Elections[3].date;
 }
 
 //BTN CLICKS ELECTIONS
