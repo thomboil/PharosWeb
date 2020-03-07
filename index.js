@@ -261,3 +261,10 @@ function actionBtnActivate(){
 
     //console.log(cpt);
 }
+
+function changeStar(element){
+    console.log(element);
+    element.classList.toggle('far');
+    element.classList.toggle('fas');
+    
+}
