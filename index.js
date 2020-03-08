@@ -171,3 +171,36 @@ function changeSelection(element)
     }
 }
 
+function updateTitre(){
+
+    //<body onload="updateTitre()">
+
+    var monURL = window.location.href;
+    console.log(monURL);
+    var i = 0;
+    var tag;
+    var aPartir = false;
+    var l = monURL.length;
+    
+    for ( i ; i < l; i++){
+        if(aPartir === true){
+            tag = monURL.substring(i,monURL.length);
+            console.log(tag);
+            break;
+        }
+        if(monURL[i] === '&')
+        {
+            aPartir = true;
+        }
+
+    }
+
+    var titre = document.getElementById("headerTitle");
+    console.log(titre.innerHTML);
+    titre.innerHTML = tag;
+
+    
+
+    
+
+}
