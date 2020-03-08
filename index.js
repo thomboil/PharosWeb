@@ -77,6 +77,14 @@ function checkBoxCount()
         var btnComparerBackground = document.querySelector('#btnComparer');
         var btnComparer = document.getElementById("btnComparerLink")
         var btnConnaitre = document.getElementById("btnConnaitreLink");
+
+        //get le txt du bouton
+        var btnTextConnaitre = document.getElementById("btnTextConnaitre");
+        var btnTextComparer = document.getElementById("btnTextComparer");
+        // on doit switch entre la classe css .btn-text et .btn-textActive
+        //marche pas
+        console.log(btnTextConnaitre.innerHTML);
+
         var counter = 0,
         i = 0,      
         newUrl1 = 'proposition_connaitre.html?',
@@ -103,6 +111,11 @@ function checkBoxCount()
         btnConnaitreBackground.classList.add("btnActionActive");
         btnComparerBackground.classList.remove("btnActionActive");
 
+        
+        console.log(btnTextConnaitre.innerHTML);
+
+
+
         console.log(btnConnaitre.href);
         console.log(btnComparer.href);
     }
@@ -114,8 +127,7 @@ function checkBoxCount()
         btnComparer.classList.remove("noDecoration");
 
         btnComparerBackground.classList.add("btnActionActive");
-        btnConnaitreBackground.classList.remove("btnActionActive");
-
+        btnConnaitreBackground.classList.remove("btnActionActive");       
         
         console.log(btnConnaitre.href);
         console.log(btnComparer.href);
@@ -129,7 +141,6 @@ function checkBoxCount()
 
         btnConnaitreBackground.classList.remove("btnActionActive");
         btnComparerBackground.classList.remove("btnActionActive");
-
         
         console.log(btnConnaitre.href);
         console.log(btnComparer.href);
