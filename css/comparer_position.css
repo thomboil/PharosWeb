@@ -21,6 +21,7 @@ body{
     background-color:#2196F3;
     height: 64px;
 }
+
 .navbar-brand{
     font-family: 'Roboto', 'Roboto Regular', 'Roboto';
     font-weight: 800;
@@ -30,6 +31,7 @@ body{
     padding-left: 6px;
     padding-top: 15px;
 }
+
 a.nav-link{
     margin: 18px;
     color: white;
@@ -41,6 +43,7 @@ a.nav-link{
     font-size: 1.2em;
     color: rgb(215, 215, 215)
 }
+
 .PartiePolitique{
     font-family: 'Roboto';
     font-weight: 400;
@@ -72,8 +75,6 @@ a.nav-link{
     overflow-y: overlay;
 }
 
-
-
 .paragraph{
     padding: 60px 20px;
     font-family: 'Arial';
@@ -97,10 +98,12 @@ a.nav-link{
 .leftPosition{
     float: right;
 }
+
 .leftPositionTop{
     float: right;
-    padding-right: 23px;
-    padding-top: 20px;
+    padding-right: 22px;
+    padding-top: 35px;
+    font-size: 20px;
 }
 
 

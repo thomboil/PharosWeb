@@ -1,9 +1,4 @@
-/*!
- * Start Bootstrap - Blog Home (https://startbootstrap.com/template-overviews/blog-home)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-home/blob/master/LICENSE)
- */
- html{
+html{
   background-color: #F2F2F2;
 }
 
@@ -16,11 +11,11 @@ body{
   background-color: #F2F2F2;
 }
 
-
 .navbar{
   background-color:#2196F3;
   height: 64px;
 }
+
 .navbar-brand{
   font-family: 'Roboto', 'Roboto Regular', 'Roboto';
   font-weight: 800;
@@ -30,16 +25,11 @@ body{
   padding-left: 6px;
   padding-top: 15px;
 }
+
 a.nav-link{
   margin: 18px;
   color: white;
 }
-/* 
-.my-icon{
-  color: white;
-  position: absolute;
-  text-align: right;
-} */
 
 .pharostitre{
   font-size: x-large;
@@ -49,12 +39,12 @@ a.nav-link{
 .btn-menu{
   background-color: #D7D7D7;
   border-color: rgb(112, 112, 112);
-  /*text: #D7D7D7*/
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
 }
+
 .carte{
   height: 700px;
   width: 359px;
@@ -66,9 +56,8 @@ a.nav-link{
 
   border-right: 1px solid rgb(187, 187, 187);
   border-bottom: 2px solid rgb(187, 187, 187);
-  
-
 }
+
 .carte-droite{
   height: 212px;
   width: 249px;
@@ -94,7 +83,6 @@ a.nav-link{
   
 }
 
-
 .monBtn{
   height: 34px;
   width: 214px;
@@ -108,14 +96,6 @@ a.nav-link{
   margin-bottom: 10%;
   text-align: center;
   padding-top: 2%;
-   
-  
-  
-}
-/* .btn-text{
-  color: rgb(112, 112, 112); 
-
-   */
 }
 
 .col-md-2{
@@ -135,13 +115,14 @@ a.nav-link{
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 p{
   margin: 0;
 }
+
 .space{
   margin-top: 7%;
 }
-
 
 .header1{
   background-color: white;
@@ -162,12 +143,14 @@ p{
   margin-bottom: 4%; 
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .abr{
   color: rgba(0, 0, 0, 0.87);
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   padding-left: 4%;
 }
+
 .nomComplet{
   color: rgba(0, 0, 0, 0.54);
   font-size: 14px;
@@ -180,16 +163,16 @@ p{
   text-decoration: none !important;
 }
 
-
-
 .noDecoration{
   pointer-events: none !important;
   color: rgb(112, 112, 112); 
 }
+
 a{
   text-decoration: none !important;
   color: white; 
 }
+
 a:hover{
   color: white;
 }

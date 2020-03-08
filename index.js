@@ -29,15 +29,17 @@ function addElementPourElection(data)
     document.getElementById('titreElection4').innerHTML =data.Elections[3].name;
     document.getElementById('dateElection4').innerHTML = data.Elections[3].date;
 }
+
 function addElementPourPartisFedderaux(data)
 {
+    // Hide Provincial panel
     document.getElementById('carteProvinciale').style.display = "none";
 
-
-    // Ajout des specification de la boite du des parties politique federaux
+    // Ajout des specification de la boite des parties politique federaux
     var abrFed = document.querySelectorAll("#carteFederaux .abr");
     var nomCompletFed = document.querySelectorAll("#carteFederaux .nomComplet");
     var valFed = document.querySelectorAll("#carteFederaux .value");
+
     for (i = 0; i < abrFed.length; i++) {
         abrFed[i].innerHTML = data.PartisFederaux[i].abreviation;     
     }
@@ -48,7 +50,7 @@ function addElementPourPartisFedderaux(data)
         nomCompletFed[i].innerHTML = data.PartisFederaux[i].fullname;     
     }
      
-    // Ajout des specification de la boite du des parties politique provinciale
+    // Ajout des specification de la boite des parties politique provinciale
     var abrProv = document.querySelectorAll("#carteProvinciale .abr");
     var nomCompletProv = document.querySelectorAll("#carteProvinciale .nomComplet");
     var valProv = document.querySelectorAll("#carteProvinciale .value");
@@ -64,11 +66,10 @@ function addElementPourPartisFedderaux(data)
     }
 }
 
-function changeStar(element){
-    console.log(element);
+function changeStar(element)
+{
     element.classList.toggle('far');
     element.classList.toggle('fas');
-    
 }
 
 function checkBoxCount()
@@ -78,13 +79,6 @@ function checkBoxCount()
         var btnComparer = document.getElementById("btnComparerLink")
         var btnConnaitre = document.getElementById("btnConnaitreLink");
 
-        //get le txt du bouton
-        var btnTextConnaitre = document.getElementById("btnTextConnaitre");
-        var btnTextComparer = document.getElementById("btnTextComparer");
-        // on doit switch entre la classe css .btn-text et .btn-textActive
-        //marche pas
-        console.log(btnTextConnaitre.innerHTML);
-
         var counter = 0,
         i = 0,      
         newUrl1 = 'proposition_connaitre.html?',
@@ -92,16 +86,17 @@ function checkBoxCount()
 
         input_tag = document.getElementsByTagName('input');
 
-    for (i = 0; i < input_tag.length; i++) {
-
-        if (input_tag[i].type === 'checkbox' && input_tag[i].checked === true) {
-
+    for (i = 0; i < input_tag.length; i++)
+    {
+        if (input_tag[i].type === 'checkbox' && input_tag[i].checked === true)
+        {
             counter++;
             newUrl1 = newUrl1 + '&' + input_tag[i].value;
             newUrl2 = newUrl2 + '&' + input_tag[i].value;
         }
     }
-    if(counter === 1){ 
+    if(counter === 1)
+    { 
         btnConnaitre.href = newUrl1;
         btnComparer.href = "";
 
@@ -110,16 +105,9 @@ function checkBoxCount()
 
         btnConnaitreBackground.classList.add("btnActionActive");
         btnComparerBackground.classList.remove("btnActionActive");
-
-        
-        console.log(btnTextConnaitre.innerHTML);
-
-
-
-        console.log(btnConnaitre.href);
-        console.log(btnComparer.href);
     }
-    else if(counter === 2){
+    else if(counter === 2)
+    {
         btnComparer.href = newUrl2;
         btnConnaitre.href = "";
 
@@ -127,12 +115,10 @@ function checkBoxCount()
         btnComparer.classList.remove("noDecoration");
 
         btnComparerBackground.classList.add("btnActionActive");
-        btnConnaitreBackground.classList.remove("btnActionActive");       
-        
-        console.log(btnConnaitre.href);
-        console.log(btnComparer.href);
-
-    }else{
+        btnConnaitreBackground.classList.remove("btnActionActive");
+    }
+    else
+    {
         btnComparer.href = "";
         btnConnaitre.href = "";
 
@@ -141,9 +127,6 @@ function checkBoxCount()
 
         btnConnaitreBackground.classList.remove("btnActionActive");
         btnComparerBackground.classList.remove("btnActionActive");
-        
-        console.log(btnConnaitre.href);
-        console.log(btnComparer.href);
     }
 
 }
@@ -152,9 +135,10 @@ function changeSelection(element)
 {
     input_tag = document.getElementsByTagName('input');
 
-    for (i = 0; i < input_tag.length; i++) {
-
-        if (input_tag[i].type === 'checkbox') {
+    for (i = 0; i < input_tag.length; i++) 
+    {
+        if (input_tag[i].type === 'checkbox') 
+        {
             input_tag[i].checked = false;
         }
     }
@@ -182,21 +166,20 @@ function changeSelection(element)
     }
 }
 
-function updateTitre(){
-
-    //<body onload="updateTitre()">
-
+function updateTitre()
+{
     var monURL = window.location.href;
-    console.log(monURL);
+
     var i = 0;
     var tag;
     var aPartir = false;
     var l = monURL.length;
     
-    for ( i ; i < l; i++){
-        if(aPartir === true){
+    for ( i ; i < l; i++)
+    {
+        if(aPartir === true)
+        {
             tag = monURL.substring(i,monURL.length);
-            console.log(tag);
             break;
         }
         if(monURL[i] === '&')
@@ -205,19 +188,13 @@ function updateTitre(){
         }
 
     }
-
     var titre = document.getElementById("headerTitle");
-    console.log(titre.innerHTML);
     titre.innerHTML = tag;
-
 }
 
-function updateTitreComparer(){
-
-    //<body onload="updateTitreComparer()">
-
+function updateTitreComparer()
+{
     var monURL = window.location.href;
-    console.log(monURL);
     
     var eperluette1;
     var eperluette2;
@@ -230,45 +207,37 @@ function updateTitreComparer(){
     var l = monURL.length;
     
     //trouver la position des eperluettes
-    for ( i ; i < l; i++){
-        
+    for ( i ; i < l; i++)
+    { 
         if(monURL[i] === '&')
         {
             cpt = cpt+1;
             active = true;
-            console.log(cpt);
-
         }
-        if(cpt === 1 && active === true){
+        if(cpt === 1 && active === true)
+        {
             eperluette1 = i
             eperluette1;
             active = false;
-            console.log(eperluette1);
         }
-        if(cpt === 2 && active === true){
+        if(cpt === 2 && active === true)
+        {
             eperluette2 = i
             eperluette2;
             active = false;
             break;
-            console.log(eperluette2);
         }
 
     }
-
+    
     //troncate les 2 tags
     tag1 = monURL.substring(eperluette1+1,eperluette2);
     tag2 = monURL.substring(eperluette2+1,monURL.length);
 
-    console.log(tag1);
-    console.log(tag2);
-
     //set les tags dans les bon title box
     var titre1 = document.getElementById("headerTitle1");
-    console.log(titre1.innerHTML);
     titre1.innerHTML = tag1;
 
     var titre2 = document.getElementById("headerTitle2");
-    console.log(titre1.innerHTML);
     titre2.innerHTML = tag2;
-
 }
