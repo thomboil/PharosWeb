@@ -176,12 +176,15 @@ p{
 
 .btnActionActive{
   background-color: #1F96F3;
+  text-decoration: none !important;
 }
 
-.btnActionActive:hover{
-  cursor: pointer;
+.noDecoration{
+  pointer-events: none !important;
 }
-
+a{
+  text-decoration: none !important;
+}
 
 
 

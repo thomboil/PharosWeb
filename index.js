@@ -17,7 +17,6 @@ fetch('https://log2420-serve.herokuapp.com/JSON/output.json')
 function addElementPourElection(data)
 {
     //Sets names from online json Elections
-    //console.log(data.Elections[0].name);
     document.getElementById('titreElection1').innerHTML =data.Elections[0].name;
     document.getElementById('dateElection1').innerHTML = data.Elections[0].date;
 
@@ -30,236 +29,39 @@ function addElementPourElection(data)
     document.getElementById('titreElection4').innerHTML =data.Elections[3].name;
     document.getElementById('dateElection4').innerHTML = data.Elections[3].date;
 }
+function addElementPourPartisFedderaux(data)
+{
+    document.getElementById('carteProvinciale').style.display = "none";
 
-//BTN CLICKS ELECTIONS
-function clickImgElection1(){
-   var url = "http://127.0.0.1:5501/img/btn_cercleVide.svg"; 
-   var off = "img/btn_cercleVide.svg";
-   var on = "img/cercle_selected.svg";
-   
-   
-   var btn1 = document.getElementById('btnElection1');
-   var btn2 = document.getElementById('btnElection2');
-   var btn3 = document.getElementById('btnElection3');
-   var btn4 = document.getElementById('btnElection4');
-   
-   btn1.src = on;
-   btn2.src = off;
-   btn3.src = off;
-   btn4.src = off;
+
+    // Ajout des specification de la boite du des parties politique federaux
+    var abrFed = document.querySelectorAll("#carteFederaux .abr");
+    var nomCompletFed = document.querySelectorAll("#carteFederaux .nomComplet");
+    var valFed = document.querySelectorAll("#carteFederaux .value");
+    for (i = 0; i < abrFed.length; i++) {
+        abrFed[i].innerHTML = data.PartisFederaux[i].abreviation;     
+    }
+    for (i = 0; i < valFed.length; i++) {
+        valFed[i].value = data.PartisFederaux[i].abreviation;     
+    }
+    for (i = 0; i < nomCompletFed.length; i++) {
+        nomCompletFed[i].innerHTML = data.PartisFederaux[i].fullname;     
+    }
      
-//    Tests
-//    console.log(imgElement.src === img1);
-//    console.log(imgElement.src);
-}
+    // Ajout des specification de la boite du des parties politique provinciale
+    var abrProv = document.querySelectorAll("#carteProvinciale .abr");
+    var nomCompletProv = document.querySelectorAll("#carteProvinciale .nomComplet");
+    var valProv = document.querySelectorAll("#carteProvinciale .value");
 
-function clickImgElection2(){
-    var url = "http://127.0.0.1:5501/img/btn_cercleVide.svg"; 
-    var off = "img/btn_cercleVide.svg";
-    var on = "img/cercle_selected.svg";
-    
-    var btn1 = document.getElementById('btnElection1');
-    var btn2 = document.getElementById('btnElection2');
-    var btn3 = document.getElementById('btnElection3');
-    var btn4 = document.getElementById('btnElection4');
-    
-    btn1.src = off;
-    btn2.src = on;
-    btn3.src = off;
-    btn4.src = off;
-      
- //    Tests
- //    console.log(imgElement.src === img1);
- //    console.log(imgElement.src);
- 
-}
-
-function clickImgElection3(){
-    var url = "http://127.0.0.1:5501/img/btn_cercleVide.svg"; 
-    var off = "img/btn_cercleVide.svg";
-    var on = "img/cercle_selected.svg";
-    
-    var btn1 = document.getElementById('btnElection1');
-    var btn2 = document.getElementById('btnElection2');
-    var btn3 = document.getElementById('btnElection3');
-    var btn4 = document.getElementById('btnElection4');
-    
-    btn1.src = off;
-    btn2.src = off;
-    btn3.src = on;
-    btn4.src = off;
-      
- //    Tests
- //    console.log(imgElement.src === img1);
- //    console.log(imgElement.src);
- 
-}
-
-function clickImgElection4(){
-    var url = "http://127.0.0.1:5501/img/btn_cercleVide.svg"; 
-    var off = "img/btn_cercleVide.svg";
-    var on = "img/cercle_selected.svg";
-    
-    var btn1 = document.getElementById('btnElection1');
-    var btn2 = document.getElementById('btnElection2');
-    var btn3 = document.getElementById('btnElection3');
-    var btn4 = document.getElementById('btnElection4');
-    
-    btn1.src = off;
-    btn2.src = off;
-    btn3.src = off;
-    btn4.src = on;
-      
- //    Tests
- //    console.log(imgElement.src === img1);
- //    console.log(imgElement.src);
- 
-}
-
-//BTN CLICKS PARTIS
-function clickImgPartis1(){
-    var url = "http://127.0.0.1:5501/img/btn_carreVide.svg"; 
-    var off = "img/btn_carreVide.svg";
-    var on = "img/btn_carreSelect.svg";
-    
-    var btn1 = document.getElementById('btnParti1');
-    btn1.src = (btn1.src === url)? on : off;
-
-    actionBtnActivate()
- //    Tests
- //    console.log(imgElement.src === img1);
- //    console.log(imgElement.src);
-
- 
- 
-}
-
-function clickImgPartis2(){
-    var url = "http://127.0.0.1:5501/img/btn_carreVide.svg"; 
-    var off = "img/btn_carreVide.svg";
-    var on = "img/btn_carreSelect.svg";
-    
-    var btn2 = document.getElementById('btnParti2');
-    btn2.src = (btn2.src === url)? on : off;
-
-    actionBtnActivate()
- //    Tests
- //    console.log(imgElement.src === img1);
- //    console.log(imgElement.src);
- 
-}
-
-function clickImgPartis3(){
-    var url = "http://127.0.0.1:5501/img/btn_carreVide.svg"; 
-    var off = "img/btn_carreVide.svg";
-    var on = "img/btn_carreSelect.svg";
-    
-    var btn3 = document.getElementById('btnParti3');
-    btn3.src = (btn3.src === url)? on : off;
-
-    actionBtnActivate()
- //    Tests
- //    console.log(imgElement.src === img1);
- //    console.log(imgElement.src);
- 
-}
-
-function clickImgPartis4(){
-    var url = "http://127.0.0.1:5501/img/btn_carreVide.svg"; 
-    var off = "img/btn_carreVide.svg";
-    var on = "img/btn_carreSelect.svg";
-    
-    var btn4 = document.getElementById('btnParti4');
-    btn4.src = (btn4.src === url)? on : off;
-
-    actionBtnActivate()
- //    Tests
- //    console.log(imgElement.src === img1);
- //    console.log(imgElement.src);
- 
-}
-
-function clickImgPartis5(){
-    var url = "http://127.0.0.1:5501/img/btn_carreVide.svg"; 
-    var off = "img/btn_carreVide.svg";
-    var on = "img/btn_carreSelect.svg";
-    
-    var btn5 = document.getElementById('btnParti5');
-    btn5.src = (btn5.src === url)? on : off;
-
-    actionBtnActivate()
- //    Tests
- //    console.log(imgElement.src === img1);
- //    console.log(imgElement.src);
- 
-}
-
-function clickImgPartis6(){
-    var url = "http://127.0.0.1:5501/img/btn_carreVide.svg"; 
-    var off = "img/btn_carreVide.svg";
-    var on = "img/btn_carreSelect.svg";
-    
-    var btn6 = document.getElementById('btnParti6');
-    btn6.src = (btn6.src === url)? on : off;
-
-    actionBtnActivate()
- //    Tests
- //    console.log(imgElement.src === img1);
- //    console.log(imgElement.src);
- 
-}
-
-function clickImgPartis7(){
-    var url = "http://127.0.0.1:5501/img/btn_carreVide.svg"; 
-    var off = "img/btn_carreVide.svg";
-    var on = "img/btn_carreSelect.svg";
-    
-    var btn7 = document.getElementById('btnParti7');
-    btn7.src = (btn7.src === url)? on : off;
-    
-    actionBtnActivate()
- //    Tests
- //    console.log(imgElement.src === img1);
- //    console.log(imgElement.src);
- 
-}
-
-//doit avoir le meme name
-//get elements dans un tableau, compteur, si 2, active lautre shit sinon non
-
-function actionBtnActivate(){
-
-    
-    var active = "http://127.0.0.1:5501/img/btn_carreSelect.svg"; 
-    var cpt = 0;
-    var btnCarreTable = document.querySelectorAll(".btn-carre");
-    for(var i = 0; i< btnCarreTable.length ; i++ ){
-        if(btnCarreTable[i].src === active)
-        cpt++;
+    for (i = 0; i < abrProv.length; i++) {
+        abrProv[i].innerHTML = data.PartisProvinciaux[i].abreviation;     
     }
-
-    var btnConnaitre = document.querySelector("#btnConnaitre");
-    var btnComparer = document.querySelector('#btnComparer');
-
-    if(cpt === 1){
-        btnConnaitre.classList.add("btnActionActive");
-        btnConnaitre.innerHTML.
-        btnComparer.classList.remove("btnActionActive");
-        // console.log("premier btn on");
-
-    }else if( cpt === 2){
-        btnConnaitre.classList.remove("btnActionActive");
-        btnComparer.classList.add("btnActionActive");
-        // console.log("deuieme btn on");
-        // console.log("premier btn off");
-    }else{
-        btnConnaitre.classList.remove("btnActionActive");
-        btnComparer.classList.remove("btnActionActive");
-        // console.log("deuieme btn off");
-        // console.log("premier btn off");
+    for (i = 0; i < valProv.length; i++) {
+        valProv[i].value = data.PartisProvinciaux[i].abreviation;     
     }
-
-    //console.log(cpt);
+    for (i = 0; i < nomCompletProv.length; i++) {
+        nomCompletProv[i].innerHTML = data.PartisProvinciaux[i].fullname;     
+    }
 }
 
 function changeStar(element){
@@ -268,3 +70,104 @@ function changeStar(element){
     element.classList.toggle('fas');
     
 }
+
+function checkBoxCount()
+{
+        var btnConnaitreBackground = document.querySelector("#btnConnaitre");
+        var btnComparerBackground = document.querySelector('#btnComparer');
+        var btnComparer = document.getElementById("btnComparerLink")
+        var btnConnaitre = document.getElementById("btnConnaitreLink");
+        var counter = 0,
+        i = 0,      
+        newUrl1 = 'proposition_connaitre.html?',
+        newUrl2 = 'comparer_proposition.html?',
+
+        input_tag = document.getElementsByTagName('input');
+
+    for (i = 0; i < input_tag.length; i++) {
+
+        if (input_tag[i].type === 'checkbox' && input_tag[i].checked === true) {
+
+            counter++;
+            newUrl1 = newUrl1 + '&' + input_tag[i].value;
+            newUrl2 = newUrl2 + '&' + input_tag[i].value;
+        }
+    }
+    if(counter === 1){ 
+        btnConnaitre.href = newUrl1;
+        btnComparer.href = "";
+
+        btnComparer.classList.add("noDecoration");
+        btnConnaitre.classList.remove("noDecoration");
+
+        btnConnaitreBackground.classList.add("btnActionActive");
+        btnComparerBackground.classList.remove("btnActionActive");
+
+        console.log(btnConnaitre.href);
+        console.log(btnComparer.href);
+    }
+    else if(counter === 2){
+        btnComparer.href = newUrl2;
+        btnConnaitre.href = "";
+
+        btnConnaitre.classList.add("noDecoration");
+        btnComparer.classList.remove("noDecoration");
+
+        btnComparerBackground.classList.add("btnActionActive");
+        btnConnaitreBackground.classList.remove("btnActionActive");
+
+        
+        console.log(btnConnaitre.href);
+        console.log(btnComparer.href);
+
+    }else{
+        btnComparer.href = "";
+        btnConnaitre.href = "";
+
+        btnComparer.classList.add("noDecoration");
+        btnConnaitre.classList.add("noDecoration");
+
+        btnConnaitreBackground.classList.remove("btnActionActive");
+        btnComparerBackground.classList.remove("btnActionActive");
+
+        
+        console.log(btnConnaitre.href);
+        console.log(btnComparer.href);
+    }
+
+}
+
+function changeSelection(element)
+{
+    input_tag = document.getElementsByTagName('input');
+
+    for (i = 0; i < input_tag.length; i++) {
+
+        if (input_tag[i].type === 'checkbox') {
+            input_tag[i].checked = false;
+        }
+    }
+
+    var btnConnaitreBackground = document.querySelector("#btnConnaitre");
+    var btnComparerBackground = document.querySelector('#btnComparer');
+    var btnComparer = document.getElementById("btnComparerLink")
+    var btnConnaitre = document.getElementById("btnConnaitreLink");
+
+    btnComparer.classList.add("noDecoration");
+    btnConnaitre.classList.add("noDecoration");
+
+    btnConnaitreBackground.classList.remove("btnActionActive");
+    btnComparerBackground.classList.remove("btnActionActive");
+
+    if(element.value === "fed")
+    {
+        document.getElementById('carteProvinciale').style.display = "none";
+        document.getElementById('carteFederaux').style.display = "inline";
+    }
+    else if(element.value === "prov")
+    {
+        document.getElementById('carteProvinciale').style.display = "inline";
+        document.getElementById('carteFederaux').style.display = "none";
+    }
+}
+

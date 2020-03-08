@@ -46,7 +46,7 @@
 
 
   <!-- CONTENU DE LA _______________________________________________________PAGE IHIHIHHIHIHH -->
-
+<form>
   <div class="row justify-content-md-center">
       <!-- Sidebar Widgets Column -->
       <div class="col-md-4">
@@ -58,7 +58,8 @@
           <div class="container">
             <div class="row">
               <div class="col-md-2 d-flex justify-content-md-center">
-                  <img id="btnElection1" src="img/cercle_selected.svg" class="img-fluid btn-cercle" alt="Responsive image" onclick="clickImgElection1()">
+                <input name="choixElection" id="btnElection1" type="radio" value="fed" checked onclick="changeSelection(this)">
+                  <!-- <img id="btnElection1" src="img/cercle_selected.svg" class="img-fluid btn-cercle" alt="Responsive image" onclick="clickImgElection1()"> -->
               </div>
               <div class="col-md-10">
                 <p id="titreElection1" class="numElection"></p>
@@ -68,7 +69,8 @@
 
               <div class="row space">
                 <div class="col-md-2 d-flex justify-content-md-center">
-                    <img id="btnElection2" src="img/btn_cercleVide.svg" class="img-fluid btn-cercle" alt="Responsive image"  onclick="clickImgElection2()">
+                  <input name="choixElection" type="radio" value="prov" onclick="changeSelection(this)">
+                    <!-- <img id="btnElection2" src="img/btn_cercleVide.svg" class="img-fluid btn-cercle" alt="Responsive image"  onclick="clickImgElection2()"> -->
                 </div>
                 <div class="col-md-10">
                   <p id="titreElection2" class="numElection">Élections générales provinciales</p>
@@ -79,7 +81,8 @@
 
               <div class="row space">
                 <div class="col-md-2 d-flex justify-content-md-center">
-                    <img id="btnElection3" src="img/btn_cercleVide.svg" class="img-fluid btn-cercle" alt="Responsive image"  onclick="clickImgElection3()">
+                  <input name="choixElection" type="radio" value="fed" onclick="changeSelection(this)">
+                    <!-- <img id="btnElection3" src="img/btn_cercleVide.svg" class="img-fluid btn-cercle" alt="Responsive image"  onclick="clickImgElection3()"> -->
                 </div>
                 <div class="col-md-10">
                   <p id="titreElection3" class="numElection">42e élection fédérale</p>
@@ -89,7 +92,8 @@
 
               <div class="row space">
                 <div class="col-md-2 d-flex justify-content-md-center">
-                    <img id="btnElection4" src="img/btn_cercleVide.svg" class="img-fluid btn-cercle" alt="Responsive image"  onclick="clickImgElection4()">
+                  <input name="choixElection" type="radio" value="prov" onclick="changeSelection(this)">
+                    <!-- <img id="btnElection4" src="img/btn_cercleVide.svg" class="img-fluid btn-cercle" alt="Responsive image"  onclick="clickImgElection4()"> -->
                 </div>
                 <div class="col-md-10">
                   <p id="titreElection4" class="numElection">Élections générales provinciales</p>
@@ -105,11 +109,13 @@
 
         <!-- Search Widget -->
         <div class="carte">
+          <div id="carteFederaux">
           <h5 class="header2">Partis politiques fédéraux</h5>
           <div class="container">
             <div class="row space">
               <div class="col-md-2 d-flex justify-content-md-center">
-                <img id="btnParti1" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis1()">
+                <input name="choix" type="checkbox" class="value" value="" onclick="checkBoxCount()">
+                <!-- <img id="btnParti1" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis1()"> -->
               </div>
               <div class="col-md-10">
                 <p class="abr">P.L.C.</p>
@@ -119,18 +125,8 @@
 
             <div class="row space">
               <div class="col-md-2 d-flex justify-content-md-center">
-                <img id="btnParti2" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis2()">
-              </div>
-              <div class="col-md-10">
-                <p class="abr">P.L.C.</p>
-                <p class="nomComplet">Parti libéral du Canada</p>
-              </div>
-            </div>
-
-
-            <div class="row space">
-              <div class="col-md-2 d-flex justify-content-md-center">
-                <img id="btnParti3" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis3()">
+                <input name="choix" type="checkbox" class="value" value="" onclick="checkBoxCount()">
+                <!-- <img id="btnParti2" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis2()"> -->
               </div>
               <div class="col-md-10">
                 <p class="abr">P.L.C.</p>
@@ -141,7 +137,8 @@
 
             <div class="row space">
               <div class="col-md-2 d-flex justify-content-md-center">
-                <img id="btnParti4" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis4()">
+                <input name="choix" type="checkbox" class="value" value="" onclick="checkBoxCount()">
+                <!-- <img id="btnParti3" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis3()"> -->
               </div>
               <div class="col-md-10">
                 <p class="abr">P.L.C.</p>
@@ -152,7 +149,20 @@
 
             <div class="row space">
               <div class="col-md-2 d-flex justify-content-md-center">
-                <img id="btnParti5" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis5()">
+                <input name="choix" type="checkbox" class="value" value="" onclick="checkBoxCount()">
+                <!-- <img id="btnParti4" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis4()"> -->
+              </div>
+              <div class="col-md-10">
+                <p class="abr">P.L.C.</p>
+                <p class="nomComplet">Parti libéral du Canada</p>
+              </div>
+            </div>
+
+
+            <div class="row space">
+              <div class="col-md-2 d-flex justify-content-md-center">
+                <input name="choix" type="checkbox" class="value" value="" onclick="checkBoxCount()">
+                <!-- <img id="btnParti5" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis5()"> -->
               </div>
               <div class="col-md-10">
                 <p class="abr">P.L.C.</p>
@@ -162,26 +172,104 @@
 
             <div class="row space">
               <div class="col-md-2 d-flex justify-content-md-center">
-                <img id="btnParti6" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis6()">
+                <input name="choix" type="checkbox" class="value" value="" onclick="checkBoxCount()">
+                <!-- <img id="btnParti6" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis6()"> -->
               </div>
               <div class="col-md-10">
                 <p class="abr">P.L.C.</p>
                 <p class="nomComplet">Parti libéral du Canada</p>
               </div>
             </div>
-
-            <div class="row space">
-              <div class="col-md-2 d-flex justify-content-md-center">
-                <img id="btnParti7" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis7()">
-              </div>
-              <div class="col-md-10">
-                <p class="abr">P.L.C.</p>
-                <p class="nomComplet">Parti libéral du Canada</p>
-              </div>
-            </div>
+          </div>   
           </div>
+          <div id="carteProvinciale">
+            <h5 class="header2">Partis politiques provinciaux</h5>
+            <div class="container">
+              <div class="row space">
+                <div class="col-md-2 d-flex justify-content-md-center">
+                  <input name="choix" type="checkbox" class="value" value="" onclick="checkBoxCount()">
+                  <!-- <img id="btnParti1" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis1()"> -->
+                </div>
+                <div class="col-md-10">
+                  <p class="abr">P.L.C.</p>
+                  <p class="nomComplet">Parti libéral du Canada</p>
+                </div>
+              </div>
+  
+              <div class="row space">
+                <div class="col-md-2 d-flex justify-content-md-center">
+                  <input name="choix" type="checkbox" class="value" value="" onclick="checkBoxCount()">
+                  <!-- <img id="btnParti2" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis2()"> -->
+                </div>
+                <div class="col-md-10">
+                  <p class="abr">P.L.C.</p>
+                  <p class="nomComplet">Parti libéral du Canada</p>
+                </div>
+              </div>
+  
+  
+              <div class="row space">
+                <div class="col-md-2 d-flex justify-content-md-center">
+                  <input name="choix" type="checkbox" class="value" value="" onclick="checkBoxCount()">
+                  <!-- <img id="btnParti3" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis3()"> -->
+                </div>
+                <div class="col-md-10">
+                  <p class="abr">P.L.C.</p>
+                  <p class="nomComplet">Parti libéral du Canada</p>
+                </div>
+              </div>
+  
+  
+              <div class="row space">
+                <div class="col-md-2 d-flex justify-content-md-center">
+                  <input name="choix" type="checkbox" class="value" value="" onclick="checkBoxCount()">
+                  <!-- <img id="btnParti4" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis4()"> -->
+                </div>
+                <div class="col-md-10">
+                  <p class="abr">P.L.C.</p>
+                  <p class="nomComplet">Parti libéral du Canada</p>
+                </div>
+              </div>
+  
+  
+              <div class="row space">
+                <div class="col-md-2 d-flex justify-content-md-center">
+                  <input name="choix" type="checkbox" class="value" value="" onclick="checkBoxCount()">
+                  <!-- <img id="btnParti5" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis5()"> -->
+                </div>
+                <div class="col-md-10">
+                  <p class="abr">P.L.C.</p>
+                  <p class="nomComplet">Parti libéral du Canada</p>
+                </div>
+              </div>
+  
+              <div class="row space">
+                <div class="col-md-2 d-flex justify-content-md-center">
+                  <input name="choix" type="checkbox" class="value" value="" onclick="checkBoxCount()">
+                  <!-- <img id="btnParti6" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis6()"> -->
+                </div>
+                <div class="col-md-10">
+                  <p class="abr">P.L.C.</p>
+                  <p class="nomComplet">Parti libéral du Canada</p>
+                </div>
+              </div>
+  
+              <div class="row space">
+                <div class="col-md-2 d-flex justify-content-md-center">
+                  <input name="choix" type="checkbox" class="value" value="" onclick="checkBoxCount()">
+                  <!-- <img id="btnParti7" src="img/btn_carreVide.svg" class="img-fluid btn-carre" alt="Responsive image" onclick="clickImgPartis7()"> -->
+                </div>
+                <div class="col-md-10">
+                  <p class="abr">P.L.C.</p>
+                  <p class="nomComplet">Parti libéral du Canada</p>
+                </div>    
+              </div>
+            </div>   
+            </div>
         </div>
       </div>
+
+      
 
       <!-- Sidebar Widgets Column -->
       <div class="col-md-4">
@@ -198,27 +286,21 @@
               <button class="btn btn-primary btn-menu btn-choix" type="submit">Comparer deux propositions...</button>
             </div> -->
 
-            <div id="btnConnaitre" class= "monBtn">
-              <a href="" class="monBtn"></a>
-              <span class="btn-text">Connaitre les propositions...</span>
+            <div id="btnConnaitre"  class= "monBtn">
+              <a id="btnConnaitreLink" href="" class="noDecoration">
+                <span class="btn-text">Connaitre les propositions...</span>
+              </a>
             </div>
             
-            <div id = "btnComparer" class= "monBtn">
-              <span class="btn-text">Comparer deux propositions...</span>
+            <div id ="btnComparer" class= "monBtn">
+              <a id="btnComparerLink" href="" class="noDecoration">
+                <span class="btn-text">Comparer deux propositions...</span>
+              </a>
             </div>
-            
-          
         </div>
       </div>
-
-
-
     </div>
-  </div>
-    <!-- /.row -->
-
-  </div>
-  <!-- /.container -->
+</form>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
