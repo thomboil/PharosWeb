@@ -112,10 +112,10 @@ a.nav-link{
   
   
 }
-.btn-text{
+/* .btn-text{
   color: rgb(112, 112, 112); 
 
-  
+   */
 }
 
 .col-md-2{
@@ -176,21 +176,23 @@ p{
 }
 
 .btnActionActive{
-  background-color: #1F96F3;
+  background-color: rgba(33, 150, 243, 1);
   text-decoration: none !important;
 }
 
-.btn-textActive{
-  color: white;
-}
+
 
 .noDecoration{
   pointer-events: none !important;
+  color: rgb(112, 112, 112); 
 }
 a{
   text-decoration: none !important;
+  color: white; 
 }
-
+a:hover{
+  color: white;
+}
 
 
 
