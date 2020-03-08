@@ -199,8 +199,65 @@ function updateTitre(){
     console.log(titre.innerHTML);
     titre.innerHTML = tag;
 
-    
+}
 
+function updateTitreComparer(){
+
+    //<body onload="updateTitreComparer()">
+
+    var monURL = window.location.href;
+    console.log(monURL);
     
+    var eperluette1;
+    var eperluette2;
+    var tag1;
+    var tag2;
+
+    var active = false;
+    var i = 0;
+    var cpt = 0;
+    var l = monURL.length;
+    
+    //trouver la position des eperluettes
+    for ( i ; i < l; i++){
+        
+        if(monURL[i] === '&')
+        {
+            cpt = cpt+1;
+            active = true;
+            console.log(cpt);
+
+        }
+        if(cpt === 1 && active === true){
+            eperluette1 = i
+            eperluette1;
+            active = false;
+            console.log(eperluette1);
+        }
+        if(cpt === 2 && active === true){
+            eperluette2 = i
+            eperluette2;
+            active = false;
+            break;
+            console.log(eperluette2);
+        }
+
+    }
+
+    //troncate les 2 tags
+    tag1 = monURL.substring(eperluette1+1,eperluette2);
+    tag2 = monURL.substring(eperluette2+1,monURL.length);
+
+    console.log(tag1);
+    console.log(tag2);
+
+    //set les tags dans les bon title box
+    var titre1 = document.getElementById("headerTitle1");
+    console.log(titre1.innerHTML);
+    titre1.innerHTML = tag1;
+
+    var titre2 = document.getElementById("headerTitle2");
+    console.log(titre1.innerHTML);
+    titre2.innerHTML = tag2;
 
 }
