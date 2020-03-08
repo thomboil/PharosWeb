@@ -18,7 +18,7 @@
   <link href="css/comparer_position.css" rel="stylesheet">
 
 </head>
-<body onload="updateTitreComparer()">
+<body onload="updateTitreComparer()"></body>
   <!-- navbar -->
   <nav class="navbar navbar-expand-lg">
     <a class="navbar-brand" href="#">PHAROS</a>
@@ -50,10 +50,24 @@
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-5 grayShader mx-auto">
-        <h2 id ="headerTitle1" class="PartiePolitique">N.P.D.<i id="star1" class="far fa-star leftPositionTop" onclick="changeStar(this)"></i></h2>
+        <div class="row">
+          <div class="col-md-11">
+            <h2 id="headerTitle1" class="PartiePolitique">N.P.D.</h2>
+          </div>
+          <div class="col-md-1">
+            <i id="star1" class="far fa-star leftPositionTop starHeader" onclick="changeStar(this)"></i>
+          </div>
+        </div>
       </div>
       <div class="col-md-5 grayShader mx-auto">
-        <h2 id="headerTitle2" class="PartiePolitique">N.P.D.<i id="star2" class="far fa-star leftPositionTop" onclick="changeStar(this)"></i></h2>
+        <div class="row">
+          <div class="col-md-11">
+            <h2 id="headerTitle2" class="PartiePolitique">N.P.D.</h2>
+          </div>
+          <div class="col-md-1">
+            <i id="star1" class="far fa-star leftPositionTop starHeader" onclick="changeStar(this)"></i>
+          </div>
+        </div>   
       </div>
       <div class="col-md-1"></div>
     </div>
