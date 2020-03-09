@@ -106,4 +106,7 @@ a.nav-link{
     font-size: 20px;
 }
 
-
+.fas.fa-star{
+    background-color: gray;
+    color: yellow;
+}
