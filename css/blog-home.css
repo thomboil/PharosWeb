@@ -176,6 +176,19 @@ a{
 a:hover{
   color: white;
 }
-
-
-
+[type = "checkbox"]{
+  height: 34px;
+  width: 34px;
+}
+[type = "radio"]{
+  height: 34px;
+  width: 34px;
+  background-color: wheat;
+}
+[type="checkbox"]{
+  filter: hue-rotate(10deg) brightness(1.7);
+  outline: 1px solid rgba(0, 0, 0, 1);
+}
+[type="radio"]{
+  filter: hue-rotate(10deg) brightness(1.2);
+}
