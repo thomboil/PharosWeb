@@ -66,11 +66,37 @@ function addElementPourPartisFedderaux(data)
     }
 }
 
+var a = [];
+
 function changeStar(element)
 {
     element.classList.toggle('far');
     element.classList.toggle('fas');
+
+    element.classList.toggle('favoris');
+
+    
+    //console.log(element.id);
+    
+    // a[a.length] = element.id;
+    // for(var i = 0; i < a.length; i++){
+    //     console.log(a[i]);
+    // }
+
+    afficherFavoris();
 }
+
+function afficherFavoris(){
+
+    var favorites = document.querySelectorAll(".favoris");
+    for(var i = 0; i < favorites.length; i++){
+        console.log(favorites[i]);
+    }
+}
+
+
+
+
 
 function checkBoxCount()
 {
